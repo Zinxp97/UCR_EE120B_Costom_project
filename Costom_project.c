@@ -94,13 +94,13 @@ void Output_object_LED_0(unsigned char area[2], signed char position[2], unsigne
 		if ((position[1]-area[1]+1) >= 0) { 
 			if (position[0]+i >= 0 && position[0]+i <= 7) LED_Matrix_0[position[0]+i] = shape[i] << (position[1] - area[1] + 1);
 		}
-		else if (position[1]-area[1]+1 < 0) {//³¬¹ýLED0ÆÁÄ»·¶Î§µ½LED1
+		else if (position[1]-area[1]+1 < 0) {//è¶…è¿‡LED0å±å¹•èŒƒå›´åˆ°LED1
 			if (position[0]+i >= 0 && position[0]+i <= 7) LED_Matrix_0[position[0]+i] = shape[i] >> (area[1] - position[1] - 1);
 			position[1] += 8;
 			Output_object_LED_1(area, position, shape);
 			position[1] -= 8;
 		}
-		if ((position[0]+i) >= 8) {//³¬¹ýLED0ÆÁÄ»·¶Î§µ½LED4
+		if ((position[0]+i) >= 8) {//è¶…è¿‡LED0å±å¹•èŒƒå›´åˆ°LED4
 			position[0] -= 8; 
 			Output_object_LED_4(area, position, shape);
 			position[0] += 8;
@@ -112,13 +112,13 @@ void Output_object_LED_1(unsigned char area[2], signed char position[2], unsigne
 		if ((position[1]-area[1]+1) >= 0) {
 			if (position[0]+i >= 0 && position[0]+i <= 7) LED_Matrix_1[position[0]+i] = shape[i] << (position[1] - area[1] + 1);
 		}
-		else if (position[1]-area[1]+1 < 0) {//³¬¹ýLED1ÆÁÄ»·¶Î§µ½LED2
+		else if (position[1]-area[1]+1 < 0) {//è¶…è¿‡LED1å±å¹•èŒƒå›´åˆ°LED2
 			if (position[0]+i >= 0 && position[0]+i <= 7) LED_Matrix_1[position[0]+i] = shape[i] >> (area[1] - position[1] - 1);
 			position[1] += 8;
 			Output_object_LED_2(area, position, shape);
 			position[1] -= 8;
 		}
-		if ((position[0]+i) >= 8) {//³¬¹ýLED1ÆÁÄ»·¶Î§µ½LED5
+		if ((position[0]+i) >= 8) {//è¶…è¿‡LED1å±å¹•èŒƒå›´åˆ°LED5
 			position[0] -= 8; 
 			Output_object_LED_5(area, position, shape);
 			position[0] += 8;
@@ -130,13 +130,13 @@ void Output_object_LED_2(unsigned char area[2], signed char position[2], unsigne
 		if ((position[1]-area[1]+1) >= 0) {
 			if (position[0]+i >= 0 && position[0]+i <= 7) LED_Matrix_2[position[0]+i] = shape[i] << (position[1] - area[1] + 1);
 		}
-		else if (position[1]-area[1]+1 < 0) {//³¬¹ýLED1ÆÁÄ»·¶Î§µ½LED2
+		else if (position[1]-area[1]+1 < 0) {//è¶…è¿‡LED1å±å¹•èŒƒå›´åˆ°LED2
 			if (position[0]+i >= 0 && position[0]+i <= 7) LED_Matrix_2[position[0]+i] = shape[i] >> (area[1] - position[1] - 1);
 			position[1] += 8;
 			Output_object_LED_3(area, position, shape);
 			position[1] -= 8;
 		}
-		if ((position[0]+i) >= 8) {//³¬¹ýLED1ÆÁÄ»·¶Î§µ½LED5
+		if ((position[0]+i) >= 8) {//è¶…è¿‡LED1å±å¹•èŒƒå›´åˆ°LED5
 			position[0] -= 8;
 			Output_object_LED_6(area, position, shape);
 			position[0] += 8;
@@ -148,10 +148,10 @@ void Output_object_LED_3(unsigned char area[2], signed char position[2], unsigne
 		if ((position[1]-area[1]+1) >= 0) {
 			if (position[0]+i >= 0 && position[0]+i <= 7) LED_Matrix_3[position[0]+i] = shape[i] << (position[1] - area[1] + 1);
 		}
-		else if (position[1]-area[1]+1 < 0) {//³¬¹ýLED1ÆÁÄ»·¶Î§µ½LED2
+		else if (position[1]-area[1]+1 < 0) {//è¶…è¿‡LED1å±å¹•èŒƒå›´åˆ°LED2
 			if (position[0]+i >= 0 && position[0]+i <= 7) LED_Matrix_3[position[0]+i] = shape[i] >> (area[1] - position[1] - 1);
 		}
-		if ((position[0]+i) >= 8) {//³¬¹ýLED1ÆÁÄ»·¶Î§µ½LED5
+		if ((position[0]+i) >= 8) {//è¶…è¿‡LED1å±å¹•èŒƒå›´åˆ°LED5
 			position[0] -= 8;
 			Output_object_LED_7(area, position, shape);
 			position[0] += 8;
@@ -208,7 +208,7 @@ void Output_object_LED_7(unsigned char area[2], signed char position[2], unsigne
 	}
 }
 void Output_object(unsigned char area[2], signed char position[2], unsigned char shape[]) {
-	if (position[1] >= 24) {//´óÓÚ24ÔòÎª×óÊýµÚÒ»¿é°å
+	if (position[1] >= 24) {//å¤§äºŽ24åˆ™ä¸ºå·¦æ•°ç¬¬ä¸€å—æ¿
 		position[1] -= 24;
 		if (position[0] >= 8) {
 			position[0] -= 8;
