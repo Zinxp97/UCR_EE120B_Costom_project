@@ -258,7 +258,7 @@ int TickFct_EG(int state){
 	switch(state){
 		case EG_Start:
 		enemies_1[enemies_1Num].position[0] = (rand()%15);
-		enemies_1[enemies_1Num].position[1] = (rand()%8);// 会被改成0
+		enemies_1[enemies_1Num].position[1] = (rand()%8);// 禄谩卤禄赂脛鲁脡0
 		enemies_1[enemies_1Num].area[0] = 3;
 		enemies_1[enemies_1Num].area[1] = 3;
 		enemies_1[enemies_1Num].shape[0] = 0b00000011;
